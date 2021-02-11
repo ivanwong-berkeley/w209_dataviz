@@ -35,7 +35,7 @@ def plot_all_category_global():
         y='Category:N',
         color='Category:N',
         x='count(Category):Q'
-    ).properties(width=1000, height=100).transform_filter(
+    ).properties(width=1000, height=200).transform_filter(
         brush
     )
 
@@ -53,7 +53,7 @@ def plot_all_category_global():
     y='Net:Q',
     color= 'Category:N', 
     tooltip=['Sellers', 'LQS', 'Reviews', 'Rank', 'Fees', 'Net', 'Est_Monthly_Sales','Est_Monthly_Revenue', 'Category', 'Product_Name']
-).properties(width=400, height=200)
+).properties(width=375, height=200)
     
     plot_product_bar_json = plot_product_bar.to_json()
 
@@ -66,7 +66,7 @@ def plot_all_category_global():
     y='Reviews:Q',
     color= 'Category:N', 
     tooltip=['Sellers', 'LQS', 'Reviews', 'Rank', 'Fees', 'Net', 'Est_Monthly_Sales','Est_Monthly_Revenue', 'Category', 'Product_Name']
-).properties(width=400, height=200)
+).properties(width=375, height=200)
 
     plot_product_line_json = plot_product_line.to_json()
     
@@ -81,7 +81,7 @@ def plot_all_category_global():
     tooltip=['year(Date_First_Available)', 'Sellers', 'LQS', 'Reviews', 'Rank', 'Fees', 'Net', 'Est_Monthly_Sales','Est_Monthly_Revenue', 'Category', 'Product_Name']
 ).properties(
             height=200,
-            width=400,
+            width=375,
             ).interactive()
     
     plot_product_bar_year_json = plot_product_bar_year.to_json()
@@ -97,7 +97,7 @@ def plot_all_category_global():
     tooltip=['yearquartermonth(Date_First_Available)', 'Sellers', 'LQS', 'Reviews', 'Rank', 'Fees', 'Net', 'Est_Monthly_Sales','Est_Monthly_Revenue', 'Category', 'Product_Name']
 ).properties(
             height=200,
-            width=400,
+            width=375,
             ).interactive()
     
     plot_product_bar_yearqtrmonth_json = plot_product_bar_yearqtrmonth.to_json()
@@ -105,7 +105,7 @@ def plot_all_category_global():
     ################################
     # finalize data send to template
     ################################
-    total_category_count = "3"
+    total_category_count = "23"
     total_product_count = df.shape[0]
     average_rank = "5"
     
