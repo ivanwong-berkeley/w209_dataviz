@@ -1,4 +1,4 @@
-W209 Data Visualization - Dashboard Ivan Wong
+W209 DataViz - Dashboard Ivan Wong
 
 To Run:
 
