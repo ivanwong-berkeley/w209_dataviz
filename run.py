@@ -6,4 +6,5 @@ from web import app
 
 # Ivan added code 12-26-2020
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=8888)
+  # port 8889 to enable the webapp to run at the same time as jupyterlab
+  app.run(host='0.0.0.0', port=8889)
