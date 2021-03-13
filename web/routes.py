@@ -8,6 +8,8 @@ import json
 import altair as alt
 
 
+alt.data_transformers.disable_max_rows()
+
 @app.route("/")
 @app.route("/allcategory")
 def plot_all_category_global():
