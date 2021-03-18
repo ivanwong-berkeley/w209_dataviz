@@ -26,3 +26,15 @@ Run the dataload notebook to create a new product db that holds those results, a
 any other query data you add to the input_files directory. The dataload notebook a new
 column `tag` with the name of that subdirectory (or '.') so it's easy to restrict the db
 to any subset.
+
+For the ischool server:
+- cd ~
+- mv w209 w209.original
+- git clone git@github.com:ivanwong-berkeley/w209_dataviz.git w209
+- /usr/local/bin/virtualenv w209
+- cd w209
+- source bin/activate
+- pip install `cat requirements.txt`
+- touch start.wsgi
+
+Whenever you make a change, touch start.wsgi to force the server to reload
