@@ -3,15 +3,25 @@ from datetime import datetime,timedelta, date
 import pandas as pd
 import sqlite3
 import json
+import sys
+import os
 
-
+DB_FILE = "products.db"
+for dirname in reversed(sys.path):
+    candidate = os.path.join(dirname, 'products.db')
+    print(candidate)
+    if os.path.isfile(candidate):
+        DB_FILE = candidate
+        break
+print("DB_FILE " + DB_FILE) 
 
 #loading data
 def load_data():
 
     # Read sqlite query results into a pandas DataFrame
     # con = sqlite3.connect("amzn-products.db")
-    con = sqlite3.connect("products.db")
+    con = sqlite3.connect(DB_FILE)
+
     df = pd.read_sql_query("SELECT * from product ", con)
 
     # Verify that result of SQL query is stored in the dataframe
