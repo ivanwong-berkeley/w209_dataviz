@@ -36,7 +36,7 @@ def load_category_data(category_name):
     # Read sqlite query results into a pandas DataFrame
 
     # con = sqlite3.connect("amzn-products.db")
-    con = sqlite3.connect("products.db")
+    con = sqlite3.connect(DB_FILE)
 
     sql = 'select * from product where category = "{}"'.format(category_name)
 
