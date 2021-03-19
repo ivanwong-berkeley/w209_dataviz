@@ -1,4 +1,4 @@
 input_files/**
 env/**
-__pycache__/**
+**/__pycache__/**
 web/__pycache__/**
